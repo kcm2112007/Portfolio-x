@@ -38,6 +38,7 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
     onToggleTheme: () -> Unit,
     onOpenAbout: () -> Unit,
+    onOpenSkills: () -> Unit,
     onOpenProjects: () -> Unit,
     onOpenContact: () -> Unit
 ) {
@@ -112,6 +113,10 @@ fun HomeScreen(
                     Spacer(modifier = Modifier.height(12.dp))
                     OutlinedButton(onClick = onOpenAbout, modifier = Modifier.fillMaxWidth()) {
                         Text("About Me")
+                    }
+                    Spacer(modifier = Modifier.height(12.dp))
+                    OutlinedButton(onClick = onOpenSkills, modifier = Modifier.fillMaxWidth()) {
+                        Text("Skills")
                     }
                 }
             }
