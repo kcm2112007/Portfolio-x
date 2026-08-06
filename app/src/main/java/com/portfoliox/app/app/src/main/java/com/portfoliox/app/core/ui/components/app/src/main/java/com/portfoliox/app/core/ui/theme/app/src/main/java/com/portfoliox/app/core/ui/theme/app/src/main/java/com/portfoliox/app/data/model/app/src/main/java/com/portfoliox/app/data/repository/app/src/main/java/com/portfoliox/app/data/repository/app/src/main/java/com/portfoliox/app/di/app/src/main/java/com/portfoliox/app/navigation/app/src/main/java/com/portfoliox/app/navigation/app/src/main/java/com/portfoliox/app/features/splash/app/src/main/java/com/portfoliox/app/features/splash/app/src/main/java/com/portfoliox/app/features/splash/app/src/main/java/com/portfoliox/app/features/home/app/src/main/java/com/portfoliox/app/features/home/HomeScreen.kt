@@ -109,6 +109,10 @@ fun HomeScreen(
                         Spacer(modifier = Modifier.width(8.dp))
                         Text("Download Resume")
                     }
+                    Spacer(modifier = Modifier.height(12.dp))
+                    OutlinedButton(onClick = onOpenAbout, modifier = Modifier.fillMaxWidth()) {
+                        Text("About Me")
+                    }
                 }
             }
         }
