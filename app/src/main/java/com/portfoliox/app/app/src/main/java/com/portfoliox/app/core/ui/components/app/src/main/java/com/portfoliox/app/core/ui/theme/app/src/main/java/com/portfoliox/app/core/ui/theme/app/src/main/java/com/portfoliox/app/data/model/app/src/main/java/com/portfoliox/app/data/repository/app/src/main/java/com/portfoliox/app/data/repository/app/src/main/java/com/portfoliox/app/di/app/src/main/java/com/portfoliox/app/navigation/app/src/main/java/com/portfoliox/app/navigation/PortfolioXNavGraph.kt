@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.portfoliox.app.core.ui.components.PlaceholderScreen
+import com.portfoliox.app.features.about.AboutScreen
 import com.portfoliox.app.features.home.HomeScreen
 import com.portfoliox.app.features.splash.SplashScreen
 
@@ -36,9 +37,11 @@ fun PortfolioXNavGraph(
         }
 
         // --- Screens below are stubbed. Ask Claude to build each one out
-        // the same way Home/Splash were built (ViewModel + Supabase repo). ---
+        // the same way Home/Splash/About were built (ViewModel + Supabase repo). ---
         composable(Routes.Login.route) { PlaceholderScreen("Admin Login") }
-        composable(Routes.About.route) { PlaceholderScreen("About Me") }
+        composable(Routes.About.route) {
+            AboutScreen(onBack = { navController.popBackStack() })
+        }
         composable(Routes.Skills.route) { PlaceholderScreen("Skills") }
         composable(Routes.Projects.route) { PlaceholderScreen("Projects") }
         composable(Routes.ProjectDetails.route) { PlaceholderScreen("Project Details") }
